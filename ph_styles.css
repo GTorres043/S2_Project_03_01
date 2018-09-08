@@ -2,6 +2,7 @@
 
 /* This will link the pages together and give them a specific format */
 @font-face {
+    font-family: Champagne;
     src: url('cac_champagne.woff') format('woff'),
         url('cac_champagne.ttf') format('truetype');
     font-family: Grunge;
@@ -35,7 +36,7 @@ body {
 }
 
 header {
-    background-color: black
+    background-color: black;
 }
 
 p {
@@ -43,6 +44,25 @@ p {
     padding: 5px, 25px, 25px, 25px;
 }
 
+body>p {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+address {
+    font-style: normal;
+    font-size: 0.9em;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 /* Navigation Styles */
+nav>ul>li {
+    font-family: Trebuchet MS, Helvetica, sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 /* Section Styles */
 /* Description List Styles */
