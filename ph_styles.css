@@ -5,9 +5,15 @@
     font-family: Champagne;
     src: url('cac_champagne.woff') format('woff'),
         url('cac_champagne.ttf') format('truetype');
+}
+
+@font-face {
     font-family: Grunge;
     src: url('1942.woff') format('woff'),
         url('1942.ttf') format('truetype');
+}
+
+@font-face {
     font-family: Dobkin;
     src: url('DobkinPlain.woff') format('woff'),
         url('DobkinPlain.ttf') format('truetype')
@@ -26,24 +32,29 @@
 
 */
 /* Structural Styles */
+/* this will change the saturation of the background color to a darker kind of greyish color */
 html {
     background-color: hsl(91, 8%, 56%);
 }
 
+/* I used a font family to give it a specific font to the body element followed by a font stack */
 body {
     background-color: hsl(58, 31%, 84%);
     font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
 }
 
+/* The background color of the header is now black  */
 header {
     background-color: black;
 }
 
+/* this chaanges how many pixels i have in my padding and margin */
 p {
-    margin: 5px;
-    padding: 5px, 25px, 25px, 25px;
+    margin: 0px;
+    padding: 5px 25px 25px 25px;
 }
 
+/* The paragraph element is a child of the body element therefore the paragraph gets all the styles of the body including the ones added to itself */
 body>p {
     font-size: 1.1em;
     text-align: center;
@@ -58,11 +69,78 @@ address {
 }
 
 /* Navigation Styles */
-nav>ul>li {
-    font-family: Trebuchet MS, Helvetica, sans-serif;
+nav>ul>li>a {
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
+/* Whenever a link is clicked on or "visited" it shall change colors that is what this code is showing */
+nav>ul>li>a:link,
+nav>ul>li>a:visited {
+    color: white;
+    text-decoration: none;
+    background-color: hsla(0, 0%, 42%, .4);
+}
+
+/* Whenver a link is being hovered over with the mouse it wil turn a difrent color until the one using the site takes the courser off the link */
+nav>ul>li>a:active,
+nav>ul>li>a:hover {
+    color: hsla(0, 0%, 100%, .7);
+    background-color: hsl(0, 0%, 42%, .7);
+}
+
 /* Section Styles */
+/* this element gives a style to a specific element with the class ".playbill" to the h1 */
+section.playbill h1 {
+    font-size: 3em;
+    font-weight: normal;
+    margin: 0px;
+    padding: 20px 0px 10px 20px;
+}
+
+/* This code uses ID's to specificly give each section and section h1 a specific font styles and color using the id "#play1,2,3,4" */
+section#play1 {
+    background-color: hsl(240, 100%, 88%);
+}
+
+section#play1 h1 {
+    font-family: Champagne, Cursive;
+}
+
+section#play2 {
+    background-color: hsl(25, 88%, 73%);
+}
+
+section#play2 h1 {
+    font-family: Grunge, Times New Romann, Times, Serif;
+}
+
+section#play3 {
+    background-color: hsl(0, 100%, 75%);
+}
+
+section#play3 h1 {
+    font-family: Impact, Charchoal, Sans-serif;
+}
+
+section#play4 {
+    background-color: hsl(296, 86%, 86%);
+}
+
+section#play4 h1 {
+    font-family: Dobkin, Cursive;
+}
+
 /* Description List Styles */
+aside>dl>dt {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.4);
+}
+
+aside>dl>dd {
+    font-size: 1.3em;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
